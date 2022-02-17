@@ -2,7 +2,7 @@
 
 # Blog app
 
-> Blog app Setup and controllers milestone
+> Blog app: Test controllers
 
 ## Built With
 
@@ -40,10 +40,18 @@ cd blog-app  // to open the project
 
 ### Usage
 
+To make sure project works as expected create instance file from `config/application_example.yml` with name "application.yml" with required data in application_example.
+
 ```shell
     rails db:create # create database
     rails db:migrate # migrate tables
     rails s # start local host
+```
+
+### Tests
+
+```shell
+rspec # Run all tests
 ```
 
 ## Authors
