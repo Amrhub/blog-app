@@ -1,8 +1,8 @@
-class CreateUser < ActiveRecord::Migration[7.0]
+class CreateUsers < ActiveRecord::Migration[7.0]
   def change
     create_table :users do |t|
-      t.string :name
-      t.string :Photo # URL of the photo
+      t.string :Name
+      t.text :Photo
       t.text :Bio
       t.integer :PostsCounter
 
