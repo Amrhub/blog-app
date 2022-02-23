@@ -6,9 +6,4 @@ class User < ApplicationRecord
   def recent_posts
     Post.where(user_id: id).order(created_at: :desc).limit(3)
   end
-
-  def update_posts_counter
-    posts_counter = Post.where(user_id: id).count
-    update(postsCounter: posts_counter)
-  end
 end
