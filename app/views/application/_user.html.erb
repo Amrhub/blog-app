@@ -1,0 +1,13 @@
+<li class="list-group-item mb-3 rounded">
+<%= link_to user_path(user.id) do %>
+  <img src="<%= user.photo %>" alt="user profile picture" width="100"/>
+  <h2 class="h2 d-inline-block"><%= user.name %></h2>
+  <p class="d-inline-block">Number of posts:
+  <% if user.posts_counter.nil? %>
+  0
+  <% else %>
+  <%= user.posts_counter %>
+  <% end %>
+  </p>
+<% end %>
+</li>
