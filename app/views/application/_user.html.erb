@@ -1,0 +1,9 @@
+<%= link_to user_path(user.id), class: "text-decoration-none" do %>
+<li class="list-group-item rounded border-top nav-link">
+  <img src="<%= user.photo %>" alt="user profile picture" width="100"/>
+    <h2 class="h2 d-inline-block"><%= user.name %></h2>
+    <p class="d-inline-block">
+      Number of posts:<%= user.posts_counter %>
+    </p>
+</li>
+<% end %>

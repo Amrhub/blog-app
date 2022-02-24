@@ -1,4 +1,11 @@
-<h1>Here is a list of posts given user id</h1>
-<span class="bg-info text-white p-2 rounded-circle">
-  <%= @user_id %>
-</span>
+<main class="d-grid gap-3">
+  <%= render "user", user: @user %>
+  <% @posts.each do |post| %>
+    <div>
+      <%= render "post", post: post %>
+      <ul class="list-group border-bottom">
+        <%= render partial: "comment", collection: post.recent_comments %>
+      </ul>
+    </div>
+  <% end %>
+</main>

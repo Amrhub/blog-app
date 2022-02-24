@@ -1,8 +1,20 @@
-<h1>Here is the data for a specific user(id)</h1>
-<span class="bg-info text-white p-2 rounded-circle">
-<%= @user_id %>
-</span>
-<h2>Post Id:</h2>
-<span class="bg-info text-white p-2 rounded-circle">
-  <%= @post_id %>
-</span>
+<article class="card">
+  <div class="card-header d-flex justify-content-between align-items-center flex-column flex-sm-row">
+    <div class="d-flex align-items-center gap-1">
+      <h4 ><%= @post.title %> </h4>
+      <span class="h4">By</span>
+      <h5 class="h4"><%= @post.user.name %></h5>
+    </div>
+    <div>
+      Comments: <%= @post.comments.count %>,
+      Likes: <%= @post.likes.count %>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <%= @post.text %>
+  </div>
+</article>
+<div class="border-bottom">
+  <%= render partial: "comment", collection: @post.comments %>
+</div>
