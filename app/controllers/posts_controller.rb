@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
   def index
-    @user_id = params[:user_id]
+    @user = User.find(params[:user_id])
+    redirect_to users_path if @user.nil?
+    @posts = @user.posts
   end
 
   def show
-    @user_id = params[:user_id]
+    @user = User.find(params[:user_id])
 
-    @post_id = params[:id]
+    @post = Post.find(params[:id])
   end
 end
