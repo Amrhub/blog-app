@@ -2,7 +2,7 @@
 
 # Blog app
 
-> Blog app: Test controllers
+> Blog app: Processing data
 
 ## Built With
 
@@ -45,7 +45,11 @@ To make sure project works as expected create instance file from `config/applica
 ```shell
     rails db:create # create database
     rails db:migrate # migrate tables
+    rails db:seed # load all data in database from seed.rb
+    # or use rails db:setup instead of previous three but it will depend on latest version of schema.rb when running
+
     rails s # start local host
+    rails c # to start rails console
 ```
 
 ### Tests
