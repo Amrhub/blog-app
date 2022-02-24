@@ -1,4 +1,16 @@
-<h1>Here is the data for user:</h1>
-<span class="bg-info text-white p-2 rounded-circle">
-  <%= @user_id%>
-</span>
+<main class="d-grid gap-3">
+  <%= render "user", user: @user %>
+    <div class="card mb-3">
+      <div class="card-header">
+        <h2>Bio</h2>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          <%= @user.bio %>
+        </p>
+      </div>
+    </div>
+
+    <%= render partial: "post", collection: @posts %>
+    <%= link_to "See all posts", user_posts_path(@user.id), class: "btn btn-primary mx-auto", style: "width: fit-content" %>
+</main>
