@@ -6,6 +6,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     redirect_to users_path if @user.nil?
-    @posts = @user.recent_posts || "No posts"
+    @posts = @user.recent_posts || 'No posts'
   end
 end
