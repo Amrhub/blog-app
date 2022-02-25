@@ -1,0 +1,4 @@
+<%= button_to user_post_likes_path(user.id, post.id), method: :post, class: "fa fa-thumbs-up me-2 text-decoration-none border-0 text-primary" do %>
+<% end %>
+<%= link_to new_user_post_comment_path(user.id, post.id), class: "fa-comment fa-solid text-decoration-none" do %>
+<% end %>

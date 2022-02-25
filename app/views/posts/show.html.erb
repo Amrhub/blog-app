@@ -14,6 +14,9 @@
   <div class="card-body">
     <%= @post.text %>
   </div>
+  <div class="card-footer d-flex align-items-center">
+    <%= render "like_comment_links", post: @post, user: @user %>
+  </div>
 </article>
 <div class="border-bottom">
   <%= render partial: "comment", collection: @post.comments %>
