@@ -4,7 +4,7 @@
     <div>
       <%= render "post", post: post %>
       <ul class="list-group border-bottom">
-        <%= render partial: "comment", collection: post.recent_comments %>
+        <%= render partial: "comment", collection: post.comments[0..4] %>
       </ul>
     </div>
   <% end %>

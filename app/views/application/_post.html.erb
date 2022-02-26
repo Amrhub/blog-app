@@ -10,12 +10,9 @@
         <%= post.text[0..100] + "..." %>
       </p>
     </div>
-    <div class="card-footer d-flex align-items-center">
-        <%= render "like_comment_links", post: post, user: @user %>
-      <div class="ms-auto d-inline-block">
-        Comments: <%= post.comments.count %>,
-        Likes: <%= post.likes.count %>
-      </div>
-    </div>
+    <div class="card-footer text-end">
+    Comments: <%= post.comments_counter %>,
+    Likes: <%= post.likes_counter %>
+  </div>
   <% end %>
 </article>
