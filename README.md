@@ -56,6 +56,7 @@ To make sure project works as expected create instance file from `config/applica
 
 ```shell
 rspec # Run all tests
+rspec spec/models # run tests for only models
 ```
 
 ## Authors

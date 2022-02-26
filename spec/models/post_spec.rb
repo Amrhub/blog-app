@@ -6,7 +6,8 @@ RSpec.describe Post, type: :model do
   end
 
   subject do
-    Post.new(title: 'Test title', user_id: 1, comments_counter: 1, likes_counter: 23, text: 'first subject, hello world')
+    Post.new(title: 'Test title', user_id: 1, comments_counter: 1, likes_counter: 23,
+             text: 'first subject, hello world')
   end
 
   before { subject.save }
