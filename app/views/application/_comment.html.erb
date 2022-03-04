@@ -1,3 +1,15 @@
-<li class="list-group-item border-bottom-0">
-  <%= comment.user.name %>: <%= comment.text %>
+<li class="list-group-item card">
+  <div class="card-header d-flex align-items-center gap-2">
+    <%= comment.user.name %>
+    <small>
+      <%= comment.created_at.strftime("%m/%d/%Y %I:%M %p") %>
+    </small>
+
+    <% if can? :destroy, comment %>
+    <div class="ms-auto d-inline-block"> 
+      <%= button_to "", user_post_comment_path(comment.user_id,comment.post_id,comment.id), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger fa-solid fa-trash-can d-inline-block ms-auto' %>
+    </div>
+    <% end %>
+  </div>
+  <div class="card-body"><%= comment.text %></div>
 </li>

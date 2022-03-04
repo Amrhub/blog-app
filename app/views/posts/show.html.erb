@@ -8,6 +8,13 @@
     <div>
       Comments: <%= @post.comments.count %>,
       Likes: <%= @post.likes.count %>
+
+
+      <% if can? :destroy, @post %>
+        <div class="ms-3 d-inline-block"> 
+          <%= button_to "", user_post_path(@post.user_id,@post.id), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger fa-solid fa-trash-can d-inline-block ms-auto' %>
+        </div>
+      <% end %>
     </div>
   </div>
 
