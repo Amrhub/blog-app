@@ -31,7 +31,7 @@ gem 'importmap-rails'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 
 gem 'turbo-rails'
-
+gem 'tlsmail'
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 
 gem 'stimulus-rails'
@@ -103,3 +103,5 @@ group :test do
 
   gem 'webdrivers'
 end
+
+gem "sendgrid-ruby", "~> 6.6"
