@@ -17,14 +17,14 @@
   <body>
     <nav class="navbar navbar-dark bg-primary px-lg-5 px-2 py-2">
       <% if user_signed_in? %>
-      <%= link_to "My Profile", user_posts_path(current_user.id), class: "navbar-brand" %> 
-      <%= link_to "Create a new post", new_user_post_path(current_user.id), class: "navbar-brand" %>
+      <%= link_to "Home", root_path, class: 'navbar-brand' %>
+      <%= link_to "My Profile", user_posts_path(current_user.id), class: "nav-link text-white" %> 
+      <%= link_to "Create a new post", new_user_post_path(current_user.id), class: "nav-link text-white" %>
       <%= image_tag current_user&.photo, class: "rounded-circle ms-auto", style: "width:60px;aspect-ratio:1;" %>
       <span class="nav-link text-white"><%= current_user.name %></span>
-      <%= link_to 'edit profile', edit_user_registration_path, class: 'btn btn-secondary me-2' %>
-      <%= button_to 'log out', destroy_user_session_path, class: 'btn btn-danger', :method => 'delete' %>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-secondary me-2' %>
+      <%= button_to 'Log Out', destroy_user_session_path, class: 'btn btn-danger', :method => 'delete' %>
       <% else %>
-      <%= link_to "Home", root_path, class: 'navbar-brand' %>
       <div class="ms-auto">
         <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary" %>
         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success" %>
