@@ -106,4 +106,4 @@ end
 
 gem 'sendgrid-ruby', '~> 6.6'
 
-gem "cancancan", "~> 1.9"
+gem 'cancancan', '~> 1.9'

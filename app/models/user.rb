@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  # rubocop:disable all
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :confirmable
@@ -10,7 +11,7 @@ class User < ApplicationRecord
 
   Roles = [ :admin , :user ]
 
-  def is?( requested_role )
+  def is?(requested_role)
     self.role == requested_role.to_s
   end
 
