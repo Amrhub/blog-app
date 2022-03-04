@@ -36,9 +36,11 @@
     <%= f.text_field :photo, class: 'form-control' %>
   </div>
 
-  <div class="actions">
+  <div class="mb-3">
     <%= f.submit "Sign up", class: "btn btn-primary" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="d-grid gap-3">
+  <%= render "devise/shared/links" %>
+</div>
