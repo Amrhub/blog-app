@@ -105,3 +105,5 @@ group :test do
 end
 
 gem 'sendgrid-ruby', '~> 6.6'
+
+gem "cancancan", "~> 1.9"
