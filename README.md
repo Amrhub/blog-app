@@ -2,7 +2,7 @@
 
 # Blog app
 
-> Blog app: Processing data
+> Blog app: Authentication
 
 ## Built With
 

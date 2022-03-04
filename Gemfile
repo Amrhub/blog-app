@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.0'
+ruby '~> 3.1.0'
 
+gem 'devise'
 gem 'figaro'
-
 gem 'lorem_ipsum_amet', '~> 0.6.2'
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -30,8 +30,8 @@ gem 'importmap-rails'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 
+gem 'tlsmail'
 gem 'turbo-rails'
-
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 
 gem 'stimulus-rails'
@@ -103,3 +103,5 @@ group :test do
 
   gem 'webdrivers'
 end
+
+gem 'sendgrid-ruby', '~> 6.6'
