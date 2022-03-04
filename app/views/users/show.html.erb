@@ -11,6 +11,13 @@
       </div>
     </div>
 
-    <%= render partial: "post", collection: @posts %>
+    <div class="posts_container">
+      <% @posts.each do |post| %>
+        <%= render "post", post: post %>
+        <% post.comments.each do |comment| %>
+          <%= render "comment", comment: comment %>
+        <% end %>
+      <% end %>
+    </div>
     <%= link_to "See all posts", user_posts_path(@user.id), class: "btn btn-primary mx-auto", style: "width: fit-content" %>
 </main>
