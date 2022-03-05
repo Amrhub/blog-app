@@ -6,6 +6,11 @@ class PostsController < ApplicationController
     @user = User.find_by(id: params[:user_id])
     redirect_to users_path if @user.nil?
     @posts = @user.posts.includes(:comments)
+
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @posts }
+    end
   end
 
   def show
