@@ -13,20 +13,20 @@ class CommentsController < ApplicationController
     @post = Post.find(@post_id)
     comment = Comment.new(comment_params.merge(user: current_user, post_id: @post_id))
     if comment.save
-    respond_to do |format|
-      format.html do 
-        redirect_to user_post_path(@post.user_id, @post_id), success: 'Your comment was successfully posted!'
-      end
-      format.json { render json: comment }
+      respond_to do |format|
+        format.html do
+          redirect_to user_post_path(@post.user_id, @post_id), success: 'Your comment was successfully posted!'
+        end
+        format.json { render json: comment }
       end
     else
       respond_to do |format|
-        format.html do 
+        format.html do
           flash.now[:danger] = 'Your comment was not posted!'
           render :new
         end
         format.json { render json: comment.errors, status: :unprocessable_entity }
-        end
+      end
     end
   end
 
