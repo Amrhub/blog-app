@@ -76,8 +76,16 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 
   gem 'rails-controller-testing'
+  # The RSpec testing framework
+  gem 'rspec-rails'
 
-  gem 'rspec-rails', '~> 5.0.0'
+  # Capybara, the library that allows us to interact with the browser using Ruby
+  gem 'capybara'
+
+  # The following gems aids with the nuts and bolts
+  # of interacting with the browser.
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -96,12 +104,6 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-
-  gem 'capybara'
-
-  gem 'selenium-webdriver'
-
-  gem 'webdrivers'
 end
 
 gem 'sendgrid-ruby', '~> 6.6'
