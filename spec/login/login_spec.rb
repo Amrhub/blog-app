@@ -4,8 +4,8 @@ require 'capybara/rspec'
 RSpec.describe 'Login' do
   before :each do
     User.create(name: 'Test', email: 'test@test.com',
-      photo: 'https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/48457/DIG010147_1._SX360_QL80_TTD_.jpg', 
-      password: 'test1234', role: 'user', confirmed_at: Time.now)
+                photo: 'https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/48457/DIG010147_1._SX360_QL80_TTD_.jpg',
+                password: 'test1234', role: 'user', confirmed_at: Time.now)
   end
 
   describe 'when visiting log in page', type: :feature do
