@@ -109,3 +109,5 @@ end
 gem 'sendgrid-ruby', '~> 6.6'
 
 gem 'cancancan', '~> 1.9'
+
+gem 'devise-jwt', '~> 0.9.0'
