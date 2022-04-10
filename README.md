@@ -4,7 +4,7 @@
 
 > Blog app: Authentication
 
-![image](https://user-images.githubusercontent.com/87689547/162636622-d9b7e39c-2a43-43f6-ae63-624a942d01ef.png)
+![image](https://user-images.githubusercontent.com/87689547/162636896-028ef2d8-532d-4629-840e-74eb9433c415.png)
 
 > This application allows you to post your blog like and comments other blogs sign up and sign in to have more previlages
 
